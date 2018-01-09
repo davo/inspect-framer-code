@@ -5,5 +5,5 @@
     return;
   }
   // https://framer.cloud/vqEuS/app.coffee
-  window.location = loc.origin.href + "app.coffee";
+  window.location = loc.origin + loc.pathname + "app.coffee";
 })(this);
