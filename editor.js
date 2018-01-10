@@ -30,5 +30,5 @@
 	};
 	b.open('GET', loc.origin + loc.pathname + 'app.coffee', !0);
 	b.send('');
-	location = loc.origin + loc.pathname + 'app.coffee';
+	//location = loc.origin + loc.pathname + 'app.coffee';
 })(this);
