@@ -46,15 +46,15 @@
         'https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.10.1/min/vs/editor/editor.main.nls.js'
       )
 
-      var a = d.createElement('form')
-      a.action = 'http://validator.w3.org/check'
-      a.method = 'post'
-      a.enctype = 'multipart/form-data'
-      c('fragment', b.responseText)
-      c('prefill', '0')
-      c('doctype', 'Inline')
-      c('prefill_doctype', 'html401')
-      c('group', '1')
+//       var a = d.createElement('form')
+//       a.action = 'http://validator.w3.org/check'
+//       a.method = 'post'
+//       a.enctype = 'multipart/form-data'
+//       c('fragment', b.responseText)
+//       c('prefill', '0')
+//       c('doctype', 'Inline')
+//       c('prefill_doctype', 'html401')
+//       c('group', '1')
 
       var editor = monaco.editor.create(document.getElementById('container'), {
         value: b.responseText,
