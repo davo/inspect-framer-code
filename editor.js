@@ -56,7 +56,7 @@
       c('prefill_doctype', 'html401')
       c('group', '1')
 
-      monaco.editor.create(d.getElementById('container'), {
+      var editor = monaco.editor.create(document.getElementById('container'), {
         value: b.responseText,
         language: 'coffeescript',
         readOnly: false,
