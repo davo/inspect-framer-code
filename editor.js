@@ -37,44 +37,39 @@
       }
 
       var f = d.createElement('script')
-      f.setAttribute(
-        'src',
-        'https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.10.1/min/vs/loader.js'
-      )
+          f.setAttribute('src', 'https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.10.1/min/vs/loader.js')
 
-      loadJS(
-        'https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.10.1/min/vs/loader.js'
-      )
-      loadJS(
-        'https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.10.1/min/vs/editor/editor.main.nls.js'
-      )
-      loadJS(
-        'https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.10.1/min/vs/editor/editor.main.js'
-      )
+      var enls = d.createElement('script')
+          enls.setAttribute('src', 'https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.10.1/min/vs/editor/editor.main.nls.js')
 
-      //       var a = d.createElement('form')
-      //       a.action = 'http://validator.w3.org/check'
-      //       a.method = 'post'
-      //       a.enctype = 'multipart/form-data'
-      //       c('fragment', b.responseText)
-      //       c('prefill', '0')
-      //       c('doctype', 'Inline')
-      //       c('prefill_doctype', 'html401')
-      //       c('group', '1')
+      var e = d.createElement('script')
+          e.setAttribute('src', 'https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.10.1/min/vs/editor/editor.main.js')
+
+//       var a = d.createElement('form')
+//       a.action = 'http://validator.w3.org/check'
+//       a.method = 'post'
+//       a.enctype = 'multipart/form-data'
+//       c('fragment', b.responseText)
+//       c('prefill', '0')
+//       c('doctype', 'Inline')
+//       c('prefill_doctype', 'html401')
+//       c('group', '1')
 
       setTimeout(function() {
         editor = monaco.editor.create(document.getElementById('container'), {
           value: b.responseText,
-          language: 'javascript',
+          language: 'coffeescript',
           readOnly: false,
           theme: 'vs-dark'
         })
-      }, 500)
+      }, 1500)
 
       d.body.appendChild(s)
+
     }
   }
 
   b.open('GET', loc.origin + loc.pathname + 'app.coffee', !0)
   b.send('')
+
 })(document)
