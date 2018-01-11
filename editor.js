@@ -46,26 +46,30 @@
         'https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.10.1/min/vs/editor/editor.main.nls.js'
       )
 
-//       var a = d.createElement('form')
-//       a.action = 'http://validator.w3.org/check'
-//       a.method = 'post'
-//       a.enctype = 'multipart/form-data'
-//       c('fragment', b.responseText)
-//       c('prefill', '0')
-//       c('doctype', 'Inline')
-//       c('prefill_doctype', 'html401')
-//       c('group', '1')
+      //       var a = d.createElement('form')
+      //       a.action = 'http://validator.w3.org/check'
+      //       a.method = 'post'
+      //       a.enctype = 'multipart/form-data'
+      //       c('fragment', b.responseText)
+      //       c('prefill', '0')
+      //       c('doctype', 'Inline')
+      //       c('prefill_doctype', 'html401')
+      //       c('group', '1')
 
-      var editor = monaco.editor.create(document.getElementById('container'), {
-        value: b.responseText,
-        language: 'coffeescript',
-        readOnly: false,
-        theme: 'vs-dark'
-      })
+      setTimeout(function() {
+        editor = monaco.editor.create(document.getElementById('container'), {
+          value: b.responseText,
+          language: 'javascript',
+          readOnly: false,
+          theme: 'vs-dark'
+        })
+      }, 2000)
 
       d.body.appendChild(s)
     }
   }
-  b.open('GET', loc.origin + loc.pathname + 'app.coffee', !0)
-  b.send('')
+  setTimeout(function() {
+    b.open('GET', loc.origin + loc.pathname + 'app.coffee', !0)
+    b.send('')
+  }, 2000)
 })(document)
