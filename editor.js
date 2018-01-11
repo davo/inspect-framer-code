@@ -36,6 +36,12 @@
         }
       }
 
+      var f = d.createElement('script')
+      f.setAttribute(
+        'src',
+        'https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.10.1/min/vs/loader.js'
+      )
+
       loadJS(
         'https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.10.1/min/vs/loader.js'
       )
@@ -43,7 +49,7 @@
         'https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.10.1/min/vs/editor/editor.main.nls.js'
       )
       loadJS(
-        'https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.10.1/min/vs/editor/editor.main.nls.js'
+        'https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.10.1/min/vs/editor/editor.main.js'
       )
 
       //       var a = d.createElement('form')
@@ -63,13 +69,12 @@
           readOnly: false,
           theme: 'vs-dark'
         })
-      }, 2000)
+      }, 500)
 
       d.body.appendChild(s)
     }
   }
-  setTimeout(function() {
-    b.open('GET', loc.origin + loc.pathname + 'app.coffee', !0)
-    b.send('')
-  }, 2000)
+
+  b.open('GET', loc.origin + loc.pathname + 'app.coffee', !0)
+  b.send('')
 })(document)
